@@ -15,11 +15,13 @@
 typedef struct button{
 	BITMAP *imagem;
 	int pos_x, pos_y;
+	int borda_x, borda_y;
+	bool ativo;
 
 }Button;
 
-Button *criar_botao(BITMAP *imagem, int x, int y);
-void button_update(Button *b);
 
+Button *criar_botao(BITMAP *imagem, int x, int y, int borda_x, int borda_y);
+Button comida_aleatoria(Button comidas[]);
 
 #endif

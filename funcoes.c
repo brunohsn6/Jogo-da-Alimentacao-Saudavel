@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include"funcoes.h"
 
-Button *criar_botao(BITMAP *imagem, int x, int y, int borda_x, int borda_y){
+Button *criar_botao(BITMAP *imagem, int x, int y, int borda_x, int borda_y, int flag){
 	
 	Button * b = (Button*)malloc(sizeof(Button));
 	b->imagem = imagem;
@@ -9,6 +9,7 @@ Button *criar_botao(BITMAP *imagem, int x, int y, int borda_x, int borda_y){
 	b->pos_y = y;
 	b->borda_x = borda_x;
 	b->borda_y = borda_y;
+	b->flag = flag;
 	b->ativo = false;
 	return b;
 }
